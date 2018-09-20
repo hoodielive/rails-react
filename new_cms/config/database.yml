@@ -11,11 +11,12 @@
 #
 default: &default
   adapter: mysql2
+  host: 127.0.0.1
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: rails_user
   password: binah
-  socket: /var/lib/mysql/mysql.sock
+  socket: /var/run/mysql/mysql.sock
 
 development:
   <<: *default
